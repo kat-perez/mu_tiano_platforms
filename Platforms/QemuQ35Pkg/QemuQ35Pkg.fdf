@@ -557,6 +557,11 @@ FILE FREEFORM = PCD(gZeroTouchPkgTokenSpaceGuid.PcdZeroTouchCertificateFile) {
     SECTION RAW = ZeroTouchPkg/Certs/ZeroTouch/ZtdRecovery.cer
 }
 
+FILE DRIVER = 76bf3abb-cc71-48f7-a135-657935190ce7 {
+    SECTION PE32 = QemuQ35Pkg/Binaries/MuRustBds/bds.efi
+    SECTION UI = "Mu Rust BDS"
+}
+
   INF DfciPkg/IdentityAndAuthManager/IdentityAndAuthManagerDxe.inf
   INF DfciPkg/SettingsManager/SettingsManagerDxe.inf
   INF MsGraphicsPkg/MsUiTheme/Dxe/MsUiThemeProtocol.inf
