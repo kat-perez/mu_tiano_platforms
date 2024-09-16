@@ -353,7 +353,7 @@ INF  MdeModulePkg/Universal/Console/GraphicsConsoleDxe/GraphicsConsoleDxe.inf
 INF  MdeModulePkg/Universal/Console/TerminalDxe/TerminalDxe.inf
 !endif
 INF  MdeModulePkg/Universal/DriverHealthManagerDxe/DriverHealthManagerDxe.inf
-INF  MdeModulePkg/Universal/BdsDxe/BdsDxe.inf
+#INF  MdeModulePkg/Universal/BdsDxe/BdsDxe.inf
 # MU_CHANGE
 #INF  MdeModulePkg/Application/UiApp/UiApp.inf
 INF  QemuQ35Pkg/QemuKernelLoaderFsDxe/QemuKernelLoaderFsDxe.inf
@@ -567,7 +567,7 @@ FILE DRIVER = 76bf3abb-cc71-48f7-a135-657935190ce7 {
   INF MsGraphicsPkg/MsUiTheme/Dxe/MsUiThemeProtocol.inf
   INF MsGraphicsPkg/RenderingEngineDxe/RenderingEngineDxe.inf
   INF MsGraphicsPkg/DisplayEngineDxe/DisplayEngineDxe.inf
-  INF OemPkg/BootMenu/BootMenu.inf
+  #INF OemPkg/BootMenu/BootMenu.inf
   INF QemuPkg/FrontPageButtons/FrontPageButtons.inf
   INF OemPkg/FrontPage/FrontPage.inf
   INF PcBdsPkg/MsBootPolicy/MsBootPolicy.inf

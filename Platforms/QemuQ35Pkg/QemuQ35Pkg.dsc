@@ -118,7 +118,7 @@
   MsBootPolicyLib          |OemPkg/Library/MsBootPolicyLib/MsBootPolicyLib.inf
   DeviceBootManagerLib     |OemPkg/Library/DeviceBootManagerLib/DeviceBootManagerLib.inf
   MsAltBootLib             |OemPkg/Library/MsAltBootLib/MsAltBootLib.inf # interfaces with alternate boot variable
-  MsBootOptionsLib         |QemuPkg/Library/MsBootOptionsLibQemu/MsBootOptionsLib.inf # attached to BdsDxe to implement Microsoft extensions to UefiBootManagerLib.
+  #MsBootOptionsLib         |QemuPkg/Library/MsBootOptionsLibQemu/MsBootOptionsLib.inf # attached to BdsDxe to implement Microsoft extensions to UefiBootManagerLib.
   MsBootManagerSettingsLib |OemPkg/Library/MsBootManagerSettingsDxeLib/MsBootManagerSettingsDxeLib.inf
 
   # UI and graphics
@@ -999,7 +999,7 @@ QemuQ35Pkg/Library/ResetSystemLib/StandaloneMmResetSystemLib.inf
   OemPkg/FrontPage/FrontPage.inf
 
   # Application that presents & manages the Boot Menu Setup on Front Page.
-  OemPkg/BootMenu/BootMenu.inf
+  #OemPkg/BootMenu/BootMenu.inf
 
   PcBdsPkg/MsBootPolicy/MsBootPolicy.inf
 
@@ -1094,10 +1094,10 @@ QemuQ35Pkg/Library/ResetSystemLib/StandaloneMmResetSystemLib.inf
   MdeModulePkg/Universal/Metronome/Metronome.inf
   PcAtChipsetPkg/PcatRealTimeClockRuntimeDxe/PcatRealTimeClockRuntimeDxe.inf
   MdeModulePkg/Universal/DriverHealthManagerDxe/DriverHealthManagerDxe.inf
-  MdeModulePkg/Universal/BdsDxe/BdsDxe.inf {
-    <PcdsDynamicExDefault>
-      gMsGraphicsPkgTokenSpaceGuid.PcdPostBackgroundColoringSkipCount|0
-  }
+  #MdeModulePkg/Universal/BdsDxe/BdsDxe.inf {
+  #  <PcdsDynamicExDefault>
+  #    gMsGraphicsPkgTokenSpaceGuid.PcdPostBackgroundColoringSkipCount|0
+  #}
 
   QemuQ35Pkg/QemuKernelLoaderFsDxe/QemuKernelLoaderFsDxe.inf {
     <LibraryClasses>
