@@ -353,7 +353,11 @@ INF  MdeModulePkg/Universal/Console/GraphicsConsoleDxe/GraphicsConsoleDxe.inf
 INF  MdeModulePkg/Universal/Console/TerminalDxe/TerminalDxe.inf
 !endif
 INF  MdeModulePkg/Universal/DriverHealthManagerDxe/DriverHealthManagerDxe.inf
-#INF  MdeModulePkg/Universal/BdsDxe/BdsDxe.inf
+FILE DRIVER = 6D33944A-EC75-4855-A54D-809C75241F6C {
+    SECTION PE32 = QemuQ35Pkg/Binaries/MuRustBds/bds.efi
+    SECTION DXE_DEPEX_EXP = { TRUE }
+    SECTION UI = "Rust BDS"
+}
 # MU_CHANGE
 #INF  MdeModulePkg/Application/UiApp/UiApp.inf
 INF  QemuQ35Pkg/QemuKernelLoaderFsDxe/QemuKernelLoaderFsDxe.inf
@@ -556,12 +560,6 @@ FILE FREEFORM = PCD(gDfciPkgTokenSpaceGuid.PcdDfciTimerFile) {
 FILE FREEFORM = PCD(gZeroTouchPkgTokenSpaceGuid.PcdZeroTouchCertificateFile) {
     SECTION RAW = ZeroTouchPkg/Certs/ZeroTouch/ZtdRecovery.cer
 }
-
-FILE DRIVER = 76bf3abb-cc71-48f7-a135-657935190ce7 {
-    SECTION PE32 = QemuQ35Pkg/Binaries/MuRustBds/bds.efi
-    SECTION UI = "Mu Rust BDS"
-}
-
   INF DfciPkg/IdentityAndAuthManager/IdentityAndAuthManagerDxe.inf
   INF DfciPkg/SettingsManager/SettingsManagerDxe.inf
   INF MsGraphicsPkg/MsUiTheme/Dxe/MsUiThemeProtocol.inf
