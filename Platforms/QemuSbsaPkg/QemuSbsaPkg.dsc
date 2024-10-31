@@ -1138,10 +1138,6 @@
 
   MdeModulePkg/Universal/SetupBrowserDxe/SetupBrowserDxe.inf
   MdeModulePkg/Universal/DriverHealthManagerDxe/DriverHealthManagerDxe.inf
-  MdeModulePkg/Universal/BdsDxe/BdsDxe.inf {
-    <PcdsDynamicExDefault>
-      gMsGraphicsPkgTokenSpaceGuid.PcdPostBackgroundColoringSkipCount|0
-  }
   PcBdsPkg/MsBootPolicy/MsBootPolicy.inf
 
   # Apply Variable Policy to Load Option UEFI Variables

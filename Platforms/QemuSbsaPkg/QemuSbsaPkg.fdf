@@ -280,7 +280,12 @@ READ_LOCK_STATUS   = TRUE
   INF MdeModulePkg/Universal/DevicePathDxe/DevicePathDxe.inf
   INF MdeModulePkg/Universal/SetupBrowserDxe/SetupBrowserDxe.inf
   INF MdeModulePkg/Universal/DriverHealthManagerDxe/DriverHealthManagerDxe.inf
-  INF MdeModulePkg/Universal/BdsDxe/BdsDxe.inf
+  #INF MdeModulePkg/Universal/BdsDxe/BdsDxe.inf
+  FILE DRIVER = 6D33944A-EC75-4855-A54D-809C75241F6C {
+	SECTION PE32 = QemuSbsaPkg/Binaries/modern-payload/bds.efi
+	SECTION DXE_DEPEX_EXP = { TRUE }
+	SECTION UI = "Modern Payload BDS"
+  }
   INF PcBdsPkg/MsBootPolicy/MsBootPolicy.inf
 
   #
